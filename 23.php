@@ -14,7 +14,7 @@ if ($_POST)
     $val=(int)$_POST['val'];
     $sum=0;
       if (strlen($_POST['val'])==strlen($val)) {$count=strlen($val);
-          for ($i=0;$i<=$count; $i++)
+          for ($i=0;$i<$count; $i++)
           {$sum+=$_POST['val'][$i];}
           echo 'Сумма чмсел '.$val.' = '.$sum;}
     else {
