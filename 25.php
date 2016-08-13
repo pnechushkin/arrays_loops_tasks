@@ -5,7 +5,6 @@ for ($i = 0; $i <5; $i++) {
 }
 $max=max($arr);
 $min=min($arr);
-print_r($arr);
 foreach ($arr as $key=>$value)
 {
     if ($value == $max) {$keymax=$key;echo $keymax.'sdf<br/>';}
