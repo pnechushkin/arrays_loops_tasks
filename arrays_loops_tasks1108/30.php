@@ -1,17 +1,13 @@
 <?php
-$arr = array(4, 8, 1, 8, 4, 9, 0, 3, 5, 3, 1, 2, 6, 4, 9, 43, 42);
-
-$t = true;
-while ($t) {
-    $t = false;
-    for ($i = 0; $i < count($arr) - 1; $i++) {
-        if ($arr[$i] > $arr[$i + 1]) {
-            $temp = $arr[$i + 1];
-            $arr[$i + 1] = $arr[$i];
-            $arr[$i] = $temp;
-            $t = true;
+$arr = array(4, 8, 1, 8, 4, 9, 0, 3, 5, 3, 1, 2, 6, 4,40, 9, 43, 42);
+$size = count($arr)-1;
+for ($i = $size; $i>=0; $i--) {
+    for ($j = 0; $j<=($i-1); $j++)
+        if ($arr[$j]>$arr[$j+1]) {
+            $k = $arr[$j];
+            $arr[$j] = $arr[$j+1];
+            $arr[$j+1] = $k;
         }
-    }
 }
 
 echo '<pre>';

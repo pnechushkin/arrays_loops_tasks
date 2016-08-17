@@ -17,15 +17,14 @@ echo '</pre>';
 
 echo 'Сортировка по сумме значений:<br/>';
 
-foreach ($arr as $val)
-{
-    $tmparr[]=(array_sum($val));
+foreach ($arr as $key=>$val) {
+    $tmparr[$key] = (array_sum($val));
 }
 asort($tmparr);
 $arrs = array();
 foreach ($tmparr as $k=>$v)
 {
-    $arrs[]=$arr{$k};
+    $arrs[]=$arr[$k];
 }
 echo '<pre>';
 print_r($arrs);
